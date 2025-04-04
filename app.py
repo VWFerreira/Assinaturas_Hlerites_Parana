@@ -108,7 +108,7 @@ def compartilhar_arquivo(file_id, email):
 
 def enviar_pdf_assinado(pdf_assinado, nome_arquivo):
     try:
-        folder_id = '1Pzxd1j0TPNqxxNmczPa6yWtGgojbGEh6'
+        folder_id = '1wVfCJh0w8C9p0Ehz8GN6tczOMo7ADl2p'
         file_metadata = {'name': nome_arquivo, 'parents': [folder_id]}
         media = MediaIoBaseUpload(pdf_assinado, mimetype='application/pdf', resumable=True)
         file = drive_service.files().create(body=file_metadata, media_body=media, fields='id, webViewLink').execute()
